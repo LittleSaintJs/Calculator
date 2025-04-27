@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color: rgb(170, 170, 148);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .calculator {
+        background: #c4c1c1;
+        padding: 1.3rem;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 15px #888;
+        width: 15.6rem;
+      }
+
+      .nav {
+        color: rgb(142, 30, 84);
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: larger;
+        font-style: italic;
+      }
+
+      .display {
+        width: 100%;
+        height: 3rem;
+        padding: 0.6rem;
+        font-size: 1.5rem;
+        text-align: left;
+        margin-bottom: 0.9rem;
+        border: none;
+        border-radius: 0.3rem;
+        background: #f2f2f2;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.1rem;
+      }
+
+      .buttons button {
+        padding: 0.9rem;
+        font-size: 1.5rem;
+        border: none;
+        cursor: pointer;
+        background-color:#ffffff ;
+        color: black ;
+        transition: background 0.3s;
+      }
+
+      .buttons button:hover {
+        background-color: rgb(184, 204, 231);
+      }
+
+      .clear {
+        background-color: rgb(215, 101, 101) !important;
+        color: whitesmoke !important;
+      }
+
+      .equal {
+        background-color: rgb(71, 219, 34) !important;
+        color: whitesmoke !important;
+      }
+.actors {
+   background-color: rgba(0, 106, 244, 0.642) !important;
+   color: whitesmoke !important;
+   }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <div class="nav">LS CALCULATOR BUILDER</div>
+      <input type="text" class="display" id="display" readonly />
+      <div class="buttons">
+        <button class="clear" onclick="clearValue()" style="grid-column: span 2;">AC</button>
+      <button class="actors" onclick="deleteValue()">X</button>
+      <button class="actors" onclick="calculatorActions('/')">/</button>
+      <button onclick="calculatorActions('7')">7</button>
+      <button onclick="calculatorActions('8')">8</button>
+      <button onclick="calculatorActions('9')">9</button>
+      <button class="actors" onclick="calculatorActions('*')">*</button>
+      <button onclick="calculatorActions('4')">4</button>
+      <button onclick="calculatorActions('5')">5</button>
+      <button onclick="calculatorActions('6')">6</button>
+      <button class="actors" onclick="calculatorActions('-')">-</button>
+      <button onclick="calculatorActions('1')">1</button>
+      <button onclick="calculatorActions('2')">2</button>
+      <button onclick="calculatorActions('3')">3</button>
+      <button class="actors" onclick="calculatorActions('+')">+</button>
+      <button onclick="calculatorActions('0')">0</button>
+      <button onclick="calculatorActions('.')">.</button>
+      <button class="equal" onclick="calculate()" style="grid-column: span 2;">=</button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
